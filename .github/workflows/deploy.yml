@@ -7,9 +7,10 @@ on:
 jobs:
   test-checkout:
     runs-on: self-hosted
-    steps:
-      - name: Lấy mã nguồn
-        uses: actions/checkout@v3
 
-      - name: In thư mục
-        run: ls -la
+    steps:
+      - name: In đường dẫn thư mục hiện tại
+        run: pwd
+
+      - name: In toàn bộ nội dung thư mục hiện tại
+        run: ls -lah
