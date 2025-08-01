@@ -76,7 +76,7 @@ const Signin: React.FC = () => {
       <Spin spinning={loading || accessToken.length > 0} tip="Đang xử lý đăng nhập...">
         <div>
           <h2 style={{textAlign:"center"}}>Chào mừng đến với </h2>
-          <p style={{fontSize:25,fontWeight:700,color:"red",textAlign:"center"}}>FaceBug</p>
+          <p style={{fontSize:25,fontWeight:700,color:"red",textAlign:"center"}}>FaceBugGGG</p>
           
           <Form
             className="formlogin"
