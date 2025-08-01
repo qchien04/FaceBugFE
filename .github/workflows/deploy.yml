@@ -1,43 +1,15 @@
-name: CI/CD with Self-Hosted Runner
+name: Test checkout
 
 on:
   push:
     branches: [main]
 
 jobs:
-  deploy:
+  test-checkout:
     runs-on: self-hosted
-
     steps:
       - name: Lấy mã nguồn
         uses: actions/checkout@v3
 
-      - name: Kiểm tra thư mục hiện tại
-        run: pwd && ls -la
-
-      - name: Kiểm tra Node và npm
-        run: node -v && npm -v
-
-      - name: Cài dependencies
-        run: |
-          echo "🔧 Đang chạy npm install..."
-          npm install
-
-      - name: Build project
-        run: |
-          echo "🚀 Đang chạy build..."
-          npm run build
-
-      - name: Ghi log thư mục sau khi build
-        run: |
-          echo "📁 Danh sách thư mục sau khi build:"
-          ls -la
-
-      - name: Copy toàn bộ mã nguồn sang thư mục production
-        run: |
-          echo "🧹 Xóa thư mục cũ..."
-          rm -rf /projects/SocialNetwork/SocialNetworkFE
-          echo "📂 Tạo thư mục mới..."
-          mkdir -p /projects/SocialNetwork/SocialNetworkFE
-          echo "📦 Copy toàn bộ mã nguồn..."
-          cp -r . /projects/SocialNetwork/SocialNetworkFE
+      - name: In thư mục
+        run: ls -la
