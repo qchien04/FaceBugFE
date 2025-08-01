@@ -1,0 +1,25 @@
+name: CI/CD with Self-Hosted Runner
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v3
+
+      - name: Cài dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Copy toàn bộ mã nguồn sang thư mục production
+        run: |
+          rm -rf /projects/SocialNetwork/SocialNetworkFE
+          mkdir -p /projects/SocialNetwork/SocialNetworkFE
+          cp -r . /projects/SocialNetwork/SocialNetworkFE
