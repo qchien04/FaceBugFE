@@ -13,15 +13,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Cài dependencies
-        working-directory: /home/socialnetwork/SocialNetworkFE
         run: npm install
 
       - name: Build project
-        working-directory: /home/socialnetwork/SocialNetworkFE
         run: npm run build
 
       - name: Chép thư mục build sang production
         run: |
           rm -rf /projects/SocialNetwork/SocialNetworkFE
           mkdir -p /projects/SocialNetwork/SocialNetworkFE
-          cp -r /home/socialnetwork/SocialNetworkFE/dist/* /projects/SocialNetwork/SocialNetworkFE/
+          cp -r dist/* /projects/SocialNetwork/SocialNetworkFE/
