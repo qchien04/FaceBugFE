@@ -1,16 +1,12 @@
-name: Test checkout
+name: Test Self-hosted Runner
 
 on:
   push:
     branches: [main]
 
 jobs:
-  test-checkout:
+  echo-test:
     runs-on: self-hosted
-
     steps:
-      - name: In đường dẫn thư mục hiện tại
-        run: pwd
-
-      - name: In toàn bộ nội dung thư mục hiện tại
-        run: ls -lah
+      - name: In Hello World
+        run: echo "Hello from self-hosted runner!"
