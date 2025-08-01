@@ -12,37 +12,32 @@ jobs:
       - name: Lấy mã nguồn
         uses: actions/checkout@v3
 
-      - name: Kiểm tra thông tin user và thư mục hiện tại
-        run: |
-          echo "User hiện tại: $(whoami)"
-          echo "Thư mục hiện tại: $(pwd)"
-          echo "Liệt kê thư mục:"
-          ls -la
+      - name: Kiểm tra thư mục hiện tại
+        run: pwd && ls -la
+
+      - name: Kiểm tra Node và npm
+        run: node -v && npm -v
 
       - name: Cài dependencies
         run: |
-          echo "Đang chạy: npm install"
+          echo "🔧 Đang chạy npm install..."
           npm install
 
       - name: Build project
         run: |
-          echo "Đang chạy: npm run build"
+          echo "🚀 Đang chạy build..."
           npm run build
 
-      - name: Kiểm tra thư mục production trước khi copy
+      - name: Ghi log thư mục sau khi build
         run: |
-          echo "Kiểm tra quyền /projects/SocialNetwork/SocialNetworkFE (nếu tồn tại)"
-          ls -ld /projects/SocialNetwork/SocialNetworkFE || echo "Thư mục chưa tồn tại"
-          echo "Thử ghi vào thư mục"
-          touch /projects/SocialNetwork/SocialNetworkFE/test.txt || echo "Không thể ghi vào thư mục"
+          echo "📁 Danh sách thư mục sau khi build:"
+          ls -la
 
       - name: Copy toàn bộ mã nguồn sang thư mục production
         run: |
-          echo "Xóa thư mục cũ nếu có"
+          echo "🧹 Xóa thư mục cũ..."
           rm -rf /projects/SocialNetwork/SocialNetworkFE
-          echo "Tạo thư mục mới"
+          echo "📂 Tạo thư mục mới..."
           mkdir -p /projects/SocialNetwork/SocialNetworkFE
-          echo "Copy mã nguồn"
+          echo "📦 Copy toàn bộ mã nguồn..."
           cp -r . /projects/SocialNetwork/SocialNetworkFE
-          echo "Copy hoàn tất. Kiểm tra lại nội dung:"
-          ls -la /projects/SocialNetwork/SocialNetworkFE
