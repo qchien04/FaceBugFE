@@ -1,0 +1,32 @@
+.chatbox-container {
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+    height: 400px;
+    background-color: #242526;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #5e5e5e;
+}
+
+.chat-content {
+    height: 364px;
+    border-top: 1px solid #5e5e5e;
+}
+
+
+  .open-chatbox-btn {
+  position: fixed;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+  .open-chatbox-btn:nth-child(1) { bottom: 20px; }
+  .open-chatbox-btn:nth-child(2) { bottom: 80px; }
+  .open-chatbox-btn:nth-child(3) { bottom: 140px; }

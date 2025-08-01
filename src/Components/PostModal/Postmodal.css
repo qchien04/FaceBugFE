@@ -1,0 +1,30 @@
+
+.post-modal .ant-modal-content{
+    width: 100%;
+    padding: 0;
+}
+
+.post-modal .ant-modal-content .ant-modal-body{
+    width: 100%;
+}
+.comment-textarea {
+    border: none !important;  /* Loại bỏ viền */
+    outline: none !important; /* Không có viền khi focus */
+    resize: none; /* Ngăn kéo thả thay đổi kích thước */
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+}
+
+.comment-textarea:focus {
+    box-shadow: none; /* Loại bỏ hiệu ứng focus */
+}
+
+.comment-textarea:hover,
+.comment-textarea:focus,
+.comment-textarea:active {
+    box-shadow: none !important; /* Không có hiệu ứng */
+}
+.comment-arena{
+    margin-bottom: 50px;
+}

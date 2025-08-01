@@ -1,0 +1,36 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #141414;
+    color: #ffffffd9;
+    overflow-x: hidden;
+}
+.ant-card {
+    background-color: #1f1f1f;
+    border-color: #303030;
+  }
+#root{
+    width: 1600px;
+}
+
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 8px;               /* độ dày scrollbar */
+  }
+  ::-webkit-scrollbar-track {
+    background: #1f1f1f;      /* màu nền track */
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #555;   /* màu “nắm” scrollbar */
+    border-radius: 4px;       /* bo góc */
+    border: 2px solid #1f1f1f;/* tạo khoảng cách */
+  }
+  
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #1f1f1f;
+  }

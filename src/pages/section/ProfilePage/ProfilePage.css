@@ -1,0 +1,103 @@
+.profile-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-bottom {
+    width: 70%;
+    display: flex;
+    justify-content: center; /* Đảm bảo căn giữa các phần tử con */
+    margin: 0 auto; /* Căn giữa cả khối */
+    position: relative;
+}
+
+
+.left-profile .section_profile-bottom-left{
+    margin-top: 19px;
+    margin-right: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* profile right ----------------------------------------------------------------------------- */
+.profile-bottom .right-profile {
+    width: 60%; /* Chiếm 70% chiều rộng */
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.profile-bottom .right-profile .upload{
+    width: 100%; 
+    padding: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.profile-bottom .right-profile .filter{
+    width: 100%; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.profile-bottom .right-profile .post_list{
+    width: 100%; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.picture_element{
+    border-radius: 10px;
+    width: 95%;
+    height: 95%;
+    text-align: center;
+    padding: 5px;
+}
+
+.avt_element{
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    padding: 5px;
+}
+
+.button_upload_post{
+    height:50px;
+    margin: 1px;
+    font-size: 18px;
+}
+
+/* Chế độ xem danh sách và lưới */
+.post-list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.post-grid-view {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .post-grid-view {
+        grid-template-columns: 1fr;
+    }
+}

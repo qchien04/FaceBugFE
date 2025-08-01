@@ -1,0 +1,16 @@
+.avatar-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+  }
+  
+  .avatar-scroll-container::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .avatar-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }

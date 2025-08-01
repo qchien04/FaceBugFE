@@ -1,0 +1,28 @@
+/* căn giữa trên mobile */
+.avt-container{
+    position: relative;
+    display: inline-block;
+}
+
+.option-friend{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    float: right;
+}
+
+@media (max-width: 767.98px) {
+  .responsive-row {
+    justify-content: center !important;
+  }
+
+  .responsive-col {
+    text-align: center;
+  }
+
+  .option-friend{
+    margin-top: 30px;
+    float: none;
+  }
+}

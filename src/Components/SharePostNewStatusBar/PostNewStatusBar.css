@@ -1,0 +1,41 @@
+
+.button_upload_post:hover,.button_manager_post:hover{
+    background-color: rgb(148, 141, 141) !important;
+}
+.preview-upload{
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.upload-post .ant-upload{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    padding-top:0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.upload-post .ant-upload:hover{
+    background-color: #dfd9d9;
+}
+
+.in-upload-post button{
+    background: aliceblue;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.in-upload-post button:hover{
+    background-color: aliceblue;
+}
+.preview-upload .ant-row{
+    height: 100%;
+}
+.preview-upload .ant-row .ant-form-item-control-input{
+    height: 100%;
+}
+.preview-upload .ant-row .ant-form-item-control-input .ant-form-item-control-input-content{
+    height: 100%;
+    padding: 10px;  
+}

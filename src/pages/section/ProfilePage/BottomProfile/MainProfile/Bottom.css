@@ -1,0 +1,31 @@
+.friend-name {
+    width: 100%; /* Giới hạn chiều rộng */
+    word-wrap: break-word; /* Xuống dòng khi quá dài */
+    white-space: normal; /* Đảm bảo chữ có thể xuống dòng */
+    overflow-wrap: break-word; /* Tương tự word-wrap, hỗ trợ tốt hơn */
+    text-align: center; /* Căn giữa nếu cần */
+    margin-bottom: 0;
+    height: 31px;
+    font-size: 15px;
+    margin-top: 0px;
+  }
+
+a{
+  text-decoration: none;
+}
+
+.left-profile{
+  position: sticky;
+  top: -380px;
+}
+
+.square-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.picture_element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

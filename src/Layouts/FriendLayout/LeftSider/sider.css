@@ -1,0 +1,13 @@
+.Home_sidebar-left2 {
+    background-color: #1f1f1f;
+    padding: 0px;
+    height: calc(100vh - 60px);
+    top: 60px;
+    overflow-y: auto;
+    left: 0;
+    width: 100%;
+    border-right: none;
+    background-color: inherit;
+    justify-content: center;
+    padding-top: 20px;
+}
