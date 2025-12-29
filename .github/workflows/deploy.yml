@@ -18,17 +18,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to production
+      - name: Chép thư mục build sang production
         run: |
-          # Chỉ xóa nội dung cũ, không xóa thư mục gốc
           rm -rf /projects/FaceBugFE/*
           mkdir -p /projects/FaceBugFE
-
-          # Copy build
           cp -r dist/* /projects/FaceBugFE/
-
-          # Kiểm tra Nginx config trước khi reload
-          sudo nginx -t
-
-          # Reload Nginx để React app live
-          sudo systemctl reload nginx
