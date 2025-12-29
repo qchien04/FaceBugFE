@@ -18,8 +18,17 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Chép thư mục build sang production
+      - name: Deploy to production
         run: |
-          rm -rf /projects/SocialNetwork/SocialNetworkFE
-          mkdir -p /projects/SocialNetwork/SocialNetworkFE
-          cp -r dist/* /projects/SocialNetwork/SocialNetworkFE/
+          # Chỉ xóa nội dung cũ, không xóa thư mục gốc
+          rm -rf /projects/FaceBugFE/*
+          mkdir -p /projects/FaceBugFE
+
+          # Copy build
+          cp -r dist/* /projects/FaceBugFE/
+
+          # Kiểm tra Nginx config trước khi reload
+          sudo nginx -t
+
+          # Reload Nginx để React app live
+          sudo systemctl reload nginx
